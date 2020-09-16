@@ -23,7 +23,7 @@ protected:
     }
 
 public:
-    int getPowerLevel() {
+    virtual int getPowerLevel() {
         return power_level;
     }
 
@@ -74,7 +74,7 @@ public:
 class StarWars {
 
 public:
-    static string getWinner(ForceBeing player1, ForceBeing player2) {
+    static string getWinner(ForceBeing &player1, ForceBeing &player2) {
         return player1.getPowerLevel() > player2.getPowerLevel() ? player1.getName() : player2.getName();
     }
 
